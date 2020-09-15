@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: cloud-eureka-zuul
+
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: cloud-config-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+    # This application will not registered in Eureka
+    register-with-eureka: false

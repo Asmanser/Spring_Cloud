@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+zuul:
+  routes:
+    greeting:
+      serviceId: customclient
+      path: /client
+      stripPrefix: false
